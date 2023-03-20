@@ -23,16 +23,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                openNewActivity();
+                openRegistrationActivity();
+
+            }
+        });
+
+        binding.txtLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                openLoginActivity();
 
             }
         });
     }
 
-    public void openNewActivity(){
+    public void openRegistrationActivity(){
 
         Intent intent= new Intent(this,RegisterActivity.class);
         startActivity(intent);
-        finish();
+    }
+
+    public void openLoginActivity(){
+        Intent intent = new Intent(this,LoginActivity.class);
+        startActivity(intent);
     }
 }
